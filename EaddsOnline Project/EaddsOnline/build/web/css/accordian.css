@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+.pri {
+    font-size:9px;
+    width:150px;
+    list-style-type:none;
+   
+    
+}
+.ui-accordion-header {
+    text-decoration:none;
+    font-weight:bold;
+    color:#000000;
+    display:block;
+    width:100%;
+    text-align:center;
+}
+
+.ui-accordion div div {
+    font-size:90%;
+}
+
+.ui-accordion a {
+    color:#ffffff;
+    background:url(../images/navi.gif) repeat-x 0px 0px;
+}
+.ui-accordion a.selected {
+    background-color:#999;    
+}
+.ui-accordion a:hover {
+    background:url(../images/chat2.gif);    
+}
+
+.chatBox{
+    height:150px;
+    background-color:#FCF;
+    overflow:scroll;
+}
+
+
+

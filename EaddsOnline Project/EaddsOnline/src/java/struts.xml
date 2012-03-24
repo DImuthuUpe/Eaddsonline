@@ -1,0 +1,77 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="default" extends="json-default">
+        <result-types>
+            <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>
+        </result-types>
+        <action name="*Link" method="{1}" class="p.LinkHandler">
+            <result name="welcome" type="tiles">welcome</result>
+            <result name="home" type="tiles">home</result>
+            <result name="signup" type="tiles">signup</result>
+            <result name="profile" type="tiles">profile</result>
+            <result name="advertisement" type="tiles">advertisement</result>
+            <result name="feedback" type="tiles">feedback</result>
+            <result name="businessDirectory" type="tiles">businessDirectory</result>
+        </action>
+        <action name="SignUpAction" class="actions.SignUpAction">
+            <result name="Success">/pages/results/SignUpSuccess.jsp</result>
+        </action>
+        <action name="LogInAction" class="actions.LogInAction">
+            <result name="Success">/index.jsp</result>
+            <result name="input">/pages/results/LogInFailed.jsp</result>
+        </action>
+        <action name="LogOffAction" class="actions.LogOffAction">
+            <result name="Success">/index.jsp</result>
+        </action>
+        <action name="EditUserAction" class="actions.EditUserAction">
+            <result name="Success">/index.jsp</result>
+        </action>
+        <action name="AdvertisementAction" class="actions.AdvertisementAction">
+            <result name="Success" type="tiles">advertisementSuccess</result>
+        </action>
+        <action name="AdvertisementList" class="actions.AdvertisementListAction">
+            <result name="Success" type="tiles">advertisementList</result>
+        </action>
+        <action name="FeedBackAction" class="actions.FeedBackAction">
+            <result name="Success">/pages/results/FeedBackSuccess.jsp</result>
+        </action>
+        <action name="AdvertisementDetailAction" class="actions.AdvertisementDetailAction">
+            <result name="Success" type="tiles">advertisementDetail</result>
+        </action>
+        <action name="SearchBusinessAction" class="actions.SearchBusinessAction">
+            <result name="Success" type="tiles">businessDirectory</result>
+        </action>
+        <action name="AddBusinessAction" class="actions.AddBusinessAction">
+            <result name="Success">/pages/results/AddBusinessSuccess.jsp</result>
+        </action>
+        <action name="ViewUserAdvertisements" class="actions.ViewUserAdvertisements">
+            <result name="Success" type="tiles">viewUserAdvertisements</result>
+        </action>
+        <action name="AddOublicChat" class="actions.ChatAction" method="addPublicChat">
+            <result type="json">
+                <param name="root">jsonData</param>
+            </result>
+        </action>
+        <action name="ReadPublicChat" class="actions.ChatAction" method="readPublicChat">
+            <result type="json">
+                <param name="root">jsonData</param>
+            </result>
+        </action>
+        <action name="GetAjaxSession" class="actions.ChatAction" method="session">
+            <result type="json">
+                <param name="root">jsonData</param>
+            </result>
+        </action>
+        <action name="AddPrivateChat" class="actions.ChatAction" method="addPrivateChat">
+            <result type="json">
+                <param name="root">jsonData</param>
+            </result>
+        </action>
+
+        <action name="GetPrivateChat" class="actions.ChatAction" method="getPrivateChat">
+            <result type="json">
+                <param name="root">jsonData</param>
+            </result>
+        </action>
+    </package>
+</struts>

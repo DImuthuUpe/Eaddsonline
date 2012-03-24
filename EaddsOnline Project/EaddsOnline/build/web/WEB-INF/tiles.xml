@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+    
+    
+    <definition name="base" template="/base.jsp">
+     
+        <put-attribute name="header"   value="/pages/header.jsp"/>
+        <put-attribute name="selector"   value="/pages/selector.jsp"/>
+        <put-attribute name="menu"   value="/pages/menu.jsp"/>
+        <put-attribute name="chat"   value="/pages/chat.jsp"/>
+     
+    </definition>
+  
+    <definition name="welcome" extends="base">
+        <put-attribute name="body"   value="/pages/activities/home.jsp"/>
+    </definition>
+
+    <definition name="home" extends="base">
+        <put-attribute name="body"   value="/pages/activities/home.jsp"/>
+    </definition>
+
+    <definition name="profile" extends="base">
+        <put-attribute name="body"   value="/pages/activities/profile.jsp"/>
+    </definition>
+
+    <definition name="signup" extends="base">
+        <put-attribute name="body"   value="/pages/activities/signup.jsp"/>
+    </definition>
+
+    <definition name="advertisement" extends="base">
+        <put-attribute name="body"   value="/pages/activities/advertisement.jsp"/>
+    </definition>
+    <definition name="advertisementSuccess" extends="base">
+        <put-attribute name="body"   value="/pages/results/AdvertisementSuccess.jsp"/>
+    </definition>
+
+
+  
+
+    <definition name="businessDirectory.body" template="/pages/activities/businessDirectory.jsp">
+        <put-attribute name="search"   value="/pages/activities/searchBusiness.jsp"/>
+        <put-attribute name="searchResult"   value="/pages/activities/searchResultBusiness.jsp"/>
+        <put-attribute name="add"   value="/pages/activities/addBusiness.jsp"/>
+    </definition>
+
+    <definition name="businessDirectory" extends="base">
+        <put-attribute name="body" value="businessDirectory.body"/>
+    </definition>
+
+
+
+    
+
+    <definition name="feedback" extends="base">
+        <put-attribute name="body"   value="/pages/activities/feedback.jsp"/>
+    </definition>
+
+    <definition name="advertisementList" extends="base">
+        <put-attribute name="body"   value="/pages/activities/advertisementList.jsp"/>
+
+    </definition>
+
+    <definition name="advertisementDetail" extends="base">
+        <put-attribute name="body"   value="/pages/activities/advertisementDetail.jsp"/>
+    </definition>
+    <definition name="viewUserAdvertisements" extends="base">
+        <put-attribute name="body"   value="/pages/activities/profileAdvertisementList.jsp"/>
+    </definition>
+
+    
+  
+</tiles-definitions>
